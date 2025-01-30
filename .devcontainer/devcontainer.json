@@ -1,0 +1,13 @@
+{
+    "name": "Node.js",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "npm install",
+    "forwardPorts": [8080],
+    "extensions": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
+  }
