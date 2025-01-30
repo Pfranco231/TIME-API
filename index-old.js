@@ -2,16 +2,12 @@ import express from 'express';
 import axios from 'axios';
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = 8080;
 const apiKey = '44978937c54b41b880e40b30a23b963c'; // Reemplaza con tu API key de ipgeolocation.io
 
+let ipAddress; function getIPAddress(){ fetch('https://api.ipify.org?format=json') .then(response => response.json()) .then(data => { ipAddress = data.ip; console.log(ipAddress); }); } getIPAddress();
 app.get('/', async (req, res) => {
     try {
-        // Obtener la dirección IP del cliente
-        const ipResponse = await axios.get('https://api.ipify.org?format=json');
-        const ipAddress = ipResponse.data.ip;
-
-        // Obtener la hora basada en la dirección IP
         const response = await axios.get(`https://api.ipgeolocation.io/timezone?apiKey=${apiKey}&ip=${ipAddress}`);
         const { date_time_txt: datetime } = response.data;
 
