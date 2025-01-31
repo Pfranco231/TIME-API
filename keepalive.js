@@ -1,4 +1,4 @@
-const http = require('http');
+import { http } from "http";
 
 function keepAlive() {
     http.get('https://humble-robot-5gq5v6v955492vxvv-8080.app.github.dev/', (res) => {
