@@ -21,9 +21,11 @@ app.get('/', async (req, res) => {
         // Obtener la hora actual de Argentina
         const argentinaTime = moment().tz('America/Argentina/Buenos_Aires').format('YYYY-MM-DD HH:mm:ss');
 
+        const today = moment().format('MMMM DD');
         res.json({
             ipTime: datetime,
-            argentinaTime: argentinaTime
+            argentinaTime: argentinaTime,
+            today: today
         });
     } catch (error) {
         if (error.code === 'ECONNRESET') {

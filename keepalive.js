@@ -11,4 +11,4 @@ function keepAlive() {
     });
 }
 
-setInterval(keepAlive, 5 * 60 * 1000); // 5 minutos
+setInterval(keepAlive, 1 * 60 * 1000); // 5 minutos
