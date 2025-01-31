@@ -41,4 +41,4 @@ La API estará disponible en http://localhost:8080 | o la ip al servidor que se 
 
 ## Recuerda si se va a usar en un servidor privado no es necesario el devcontainer, gitignore y instalar su propio node_modules
 
-#### Las dependecias por ahora son: Express, Axios, Moment-timezone(para ver la hora en argentina) y nodemon en modo desarrollo
+#### Las dependecias por ahora son: Express, Axios, Moment-timezone(para ver la hora en argentina) y nodemon en modo desarrollo y cors para las peticiones de otros proyectos
