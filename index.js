@@ -3,6 +3,7 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 8080;
 const apiKey = '44978937c54b41b880e40b30a23b963c'; // Reemplaza con tu API key de ipgeolocation.io
 
