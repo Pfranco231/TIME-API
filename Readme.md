@@ -38,4 +38,4 @@ La API estará disponible en http://localhost:8080 | o la ip al servidor que se 
 }
 ```
 
-## Recuerda si se va a usar en un servidor privado no es necesario el devcontainer y el gitignore y instalar su propio node_modules
+## Recuerda si se va a usar en un servidor privado no es necesario el devcontainer, gitignore y instalar su propio node_modules

@@ -1,5 +1,6 @@
 import express from 'express';
 import axios from 'axios';
+import moment from 'moment-timezone';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -15,8 +16,12 @@ app.get('/', async (req, res) => {
         const response = await axios.get(`https://api.ipgeolocation.io/timezone?apiKey=${apiKey}&ip=${ipAddress}`);
         const { date_time_txt: datetime } = response.data;
 
+        // Obtener la hora actual de Argentina
+        const argentinaTime = moment().tz('America/Argentina/Buenos_Aires').format('YYYY-MM-DD HH:mm:ss');
+
         res.json({
-            time: datetime
+            ipTime: datetime,
+            argentinaTime: argentinaTime
         });
     } catch (error) {
         if (error.code === 'ECONNRESET') {
