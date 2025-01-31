@@ -31,10 +31,11 @@ npm start
 ```
 La API estará disponible en http://localhost:8080 | o la ip al servidor que se le subio
 
-## Respuesta a la hora de usat GET /
+## Respuesta a la hora de usar GET /
 ```sh
 {
   "time": "YYYY-MM-DDTHH:MM:SSZ"
+  "argentinaTime": "YYYY-MM-DD HH:MM:SS"
 }
 ```
 
